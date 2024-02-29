@@ -1,0 +1,8 @@
+#!/bin/bash
+# ICMP packet round-trip time calculator
+
+if [ -n "$1" ]; then
+  ping -c 5 "$1"
+else
+  echo "Usage: $0 {IP_ADDRESS}"
+fi
