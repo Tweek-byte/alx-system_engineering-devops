@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # ICMP packet round-trip time calculator
+# 	pings five times
+#	returns error message
 
 if [ -n "$1" ]; then
   ping -c 5 "$1"
