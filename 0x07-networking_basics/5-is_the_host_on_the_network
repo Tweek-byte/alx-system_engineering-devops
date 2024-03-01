@@ -1,4 +1,4 @@
-#!/bin/bash
+#!usr/bin/env bash
 # ICMP packet round-trip time calculator
 
 if [ -n "$1" ]; then
