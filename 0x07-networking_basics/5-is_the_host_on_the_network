@@ -2,8 +2,8 @@
 # ICMP packet round-trip time calculator
 # 	pings five times
 #	returns error message
-if [ -n "$1" ]; then
-  ping "$1"
+if [ "$#" -eq 0 ]; then
+   echo 'Usage: 5-is_the_host_on_the_network {IP_ADDRESS}'
 else
-  echo "Usage: $0 {IP_ADDRESS}"
+	ping -c 5 "$1"
 fi
