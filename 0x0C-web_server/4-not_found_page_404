@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # Error 404 page
-
 sudo apt-get update
 sudo apt-get -y install nginx
 ufw allow 'Nginx HTTP'
@@ -28,7 +27,7 @@ new_config=\
         }
 }
 "
-echo "Ceci n'est pas une page" > /var/www/html/404.html
+echo "Error 404 Not Found" > /var/www/html/404.html
 echo "$new_config" > /etc/nginx/sites-available/default
 
 if [ "$(pgrep nginx)" -le 0 ];

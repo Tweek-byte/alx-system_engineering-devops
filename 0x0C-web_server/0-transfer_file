@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# transfers a file from our client to a server
+# transfers Files from Client to Server
 
 if [ "$#" -ne 4 ]; then
   echo "Usage: $0 PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
