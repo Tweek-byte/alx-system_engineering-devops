@@ -1,7 +1,5 @@
-#!/usr/bin/python3²
+#!/usr/bin/python3
 """Returns to-do list information per EID"""
-
-
 import requests
 import sys
 
@@ -18,7 +16,6 @@ def get_todo_list(employee_id):
 
     todos_response = requests.get(
             url + "todos", params={"userId": employee_id})
-
     if todos_response.status_code != 200:
         print("Error fetching todos")
         return
