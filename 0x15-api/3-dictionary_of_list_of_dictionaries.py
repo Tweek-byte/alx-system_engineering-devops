@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import json
 import requests
-
+"""Exports TODO info to JSON format"""
 
 def fetch_data():
     """Exports data in the JSON format"""
