@@ -1,19 +1,27 @@
 #!/usr/bin/python3
 import json
 import requests
-"""Exports TODO info to JSON format"""
 
 def fetch_data():
-    """Exports data in the JSON format"""
+    """
+    Fetches user and todo data from the JSONPlaceholder API.
+
+    Returns:
+        tuple: A tuple containing lists of users and todos.
+    """
     users = requests.get('https://jsonplaceholder.typicode.com/users').json()
     todos = requests.get('https://jsonplaceholder.typicode.com/todos').json()
     return users, todos
 
-
 def export_to_json(users, todos):
-    """Exports data to a JSON file."""
-    data = {}
+    """
+    Organizes the fetched data into a dictionary and exports it to a JSON file.
 
+    Args:
+        users (list): List of user dictionaries.
+        todos (list): List of todo dictionaries.
+    """
+    data = {}
     for user in users:
         user_id = user['id']
         username = user['username']
@@ -31,7 +39,7 @@ def export_to_json(users, todos):
     with open('todo_all_employees.json', 'w') as json_file:
         json.dump(data, json_file)
 
-
 if __name__ == "__main__":
     users, todos = fetch_data()
     export_to_json(users, todos)
+
